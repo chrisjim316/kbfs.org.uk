@@ -481,7 +481,7 @@
 
                 $.ajax({
                     type: 'POST',
-                    url: 'assets/php/contact.php',
+                    url: 'https://hooks.zapier.com/hooks/catch/4016827/cpn7z8/',
                     dataType: 'json',
                     data: {
                         name: name,
@@ -495,11 +495,12 @@
                         submit.append('<i class="fa fa-cog fa-spin"></i> Wait...');
                     },
                     success: function(result) {
-                        if(result.sendstatus == 1) {
-                            ajaxResponse.html(result.message);
+                        console.log("Go results: ", result);
+                        if(result.status === "success") {
+                            ajaxResponse.html("We've got your message! We will get back to you as soon as we can :)");
                             $form.fadeOut(500);
                         } else {
-                            ajaxResponse.html(result.message);
+                            ajaxResponse.html("An unexpected error occured! Please try again later.");
                         }
                     }
                 });

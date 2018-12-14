@@ -12,7 +12,7 @@ $colors: map-merge((
 
 $theme-colors: map-merge((
     "black":     #222222,
-    "brand":     #505cfd,
+    "brand":     #0F284F,
     "new-gray":  #d8d8d8,
     "new-white": #ffffff,
 ), $theme-colors);
@@ -41,7 +41,7 @@ $link-hover-decoration:             none;
 $font-size-base:                    rem(14px);
 $line-height-base:                  1.8;
 $font-family-base:                  "Poppins", Arial;
-$font-family-serif:                 "Playfair Display", sans-serif;
+$font-family-serif:                 "Vollkorn", serif;
 
 $h1-font-size:                      rem(42px);
 $h2-font-size:                      rem(32px);
