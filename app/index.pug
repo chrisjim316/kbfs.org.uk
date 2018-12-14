@@ -8,28 +8,26 @@ append css
 append content
 
     // Hero
-    section.module-cover.parallax.text-center.fullscreen(data-background="assets/images/module-2.jpg" data-overlay="0.6")
+    section.module-cover.parallax.text-center.fullscreen(data-background="/assets/kbfs/images/kbfs_banner.jpg" data-overlay="0.6")
         .container
 
             .row
                 .col-md-12
-                    h1.m-b-20: strong Your customers will love you <br> one minute from now.
-                    p.m-b-40 See how your users experience your website in realtime or view  <br> trends to see any changes in performance over time.
+                    h1.m-b-20: strong King's Banking & Finance Society
                     p
-                        a(href="#" class="btn btn-lg btn-circle btn-brand") Get Started
-                        a(href="#" class="btn btn-lg btn-circle btn-outline-new-white") Learn More
+                        a(href="https://www.kclsu.org/organisation/kbfs/" class="btn btn-lg btn-circle btn-brand") Become a member
     // Hero end
 
     = "\n"
 
     // About
-    section.module.divider-bottom
+    section#about-us.module.divider-bottom
         .container
 
             .row
                 .col-md-6.m-auto.text-center
-                    h1 Your Site, Your Way.
-                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+                    h1 We connect King’s top talent like yourself to top financial firms and support you every step of the way in your application journey and beyond.
+                    p.lead Our events promote career opportunities and provide insight into the industries and their respective recruitment processes, equipping members with key knowledge to pursue their career aspirations in the most competitive graduate job sector.
 
             .row
                 .col-md-12
@@ -37,229 +35,233 @@ append content
 
             .row
                 .col-md-12
-                    p: img(src="assets/images/main/mega-mockup.png" alt="")
+                    p: img(src="assets/kbfs/images/bushhouse.jpg" alt="")
 
             .row
                 .col-md-12
                     .space(data-mY="30px")
 
-            .row
-                .col-lg-3.col-md-6
-                    +IconBox("ti-layout", "Visual Composer", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
-                .col-lg-3.col-md-6
-                    +IconBox("ti-cup", "Revolution Slider", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
-                .col-lg-3.col-md-6
-                    +IconBox("ti-harddrives", "User Experience", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
-                .col-lg-3.col-md-6
-                    +IconBox("ti-desktop", "Fully Responsive", "Lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam lorem ipsum amet.", "text-center", true)
+
     // About end
 
     = "\n"
 
-    // Portfolio
-    section.module.p-b-0
+    // Counters
+    section.module.bg-gray.p-b-40
         .container
-
             .row
                 .col-md-6.m-auto.text-center
-                    h1 Digital Design.
-                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+                    h1 Statistics
 
             .row
-                .col-md-12
-                    .space(data-MY="40px")
-
-            .row
-                .col-md-12
-                    ul.filters.serif
-                        li: a(href="#" data-filter="*" class="current") All
-                        li: a(href="#" data-filter=".branding") Branding
-                        li: a(href="#" data-filter=".digital") Digital
-                        li: a(href="#" data-filter=".packaging") Packaging
-
-        .container-fluid
-            .row.row-portfolio(data-columns="3")
-                .grid-sizer
-                +PortfolioItem("assets/images/portfolio/1.jpg", "Solave Cleanser", "branding", "Digital")
-                +PortfolioItem("assets/images/portfolio/4.jpg", "Monochrome", "digital", "Branding")
-                +PortfolioItem("assets/images/portfolio/3.jpg", "Ellie Cashman", "packaging", "Packaging")
-                +PortfolioItem("assets/images/portfolio/6.jpg", "White Sleeve", "branding", "Digital")
-                +PortfolioItem("assets/images/portfolio/5.jpg", "Classic Socks", "digital", "Branding")
-                +PortfolioItem("assets/images/portfolio/2.jpg", "Expirience", "packaging", "Packaging")
-    // Portfolio end
+                .col-md-3
+                    +Counter("Active Members", "2800", "icon-energy icons")
+                .col-md-3
+                    +Counter("Events Hosted", "100", "icon-energy icons")
+                .col-md-3
+                    +Counter("In Attendance", "5000", "icon-energy icons")
+                .col-md-3
+                    +Counter("Alumnus", "100", "icon-energy icons")
+    // Counters end
 
     = "\n"
-
-    // Services
-    section.module
+    section#whatwedo.module
+        .row
+            .col-md-6.m-auto.text-center
+                h1 What we do
+                br
         .container
-
             .row
                 .col-lg-4.col-md-6
-                    +IconBox("ti-layout", "Visual Composer", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "")
+                    .icon-box
+                        .icon-box-icon
+                            img(src='assets/kbfs/images/emblem_vector.jpg', width='50', height='50')
+                        .icon-box-content
+                            ul
+                                li  Collaboration with other major societies on campus
                 .col-lg-4.col-md-6
-                    +IconBox("ti-image", "Revolution Slider", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "")
+                    .icon-box
+                        .icon-box-icon
+                            img(src='assets/kbfs/images/emblem_vector.jpg', width='50', height='50')
+                        .icon-box-title
+                            h6 Network
+                        .icon-box-content
+                            ul
+                                li Application (CV, Cover Letter) and technical workshops
+
                 .col-lg-4.col-md-6
-                    +IconBox("ti-archive", "User Experience", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "")
+                    .icon-box
+                        .icon-box-icon
+                            img(src='assets/kbfs/images/emblem_vector.jpg', width='50', height='50')
+                        .icon-box-title
+                            h6 Provide
+                        .icon-box-content
+                            ul
+                                li Provide exclusive insight into specific divisions and the recruitment
+
                 .col-lg-4.col-md-6
-                    +IconBox("ti-headphone-alt", "Great Support", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "")
+                    .icon-box
+                        .icon-box-icon
+                            img(src='assets/kbfs/images/emblem_vector.jpg', width='50', height='50')
+                        .icon-box-title
+                            h6 Collaborate
+                        .icon-box-content
+                            ul
+                                li Promote timely career opportunities
+
                 .col-lg-4.col-md-6
-                    +IconBox("ti-desktop", "Fully Responsive", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "")
+                    .icon-box
+                        .icon-box-icon
+                            img(src='assets/kbfs/images/emblem_vector.jpg', width='50', height='50')
+                        .icon-box-title
+                            h6 Collaborate
+                        .icon-box-content
+                            ul
+                                li Invite speakers from Banking and Finance firms to host panels
+
                 .col-lg-4.col-md-6
-                    +IconBox("ti-slice", "Trendy Design", "See how your users experience your website in realtime or view trends to see any changes in performance over time.", "")
-    // Services end
+                    .icon-box
+                        .icon-box-icon
+                            img(src='assets/kbfs/images/emblem_vector.jpg', width='50', height='50')
+                        .icon-box-title
+                            h6 Collaborate
+                        .icon-box-content
+                            ul
+                                li Informal networking meetups every single month
+
     = "\n"
 
-    // Alt Services
-    section.module.bg-gray
-        .container
-
-            .row.align-items-center
-
-                .col-lg-6
-                    img(src="assets/images/main/ipad.png" alt="")
-
-                .col-lg-5.offset-lg-1
-                    h2 Flexible & Lightweight.
-                    p.lead Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover.
-                    .space(data-MY="50px")
-                    +iconBoxLeft("ti-layout", "Visual Composer", "Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover.")
-                    +iconBoxLeft("ti-cup", "Revolution Slider", "Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover.")
-                    +iconBoxLeft("ti-harddrives", "User Experience", "Map where your photos were taken and discover local points of interest. Map where your photos. Map where your photos were taken and discover.")
-    // Alt Services end
-
-    = "\n"
 
     // Team
-    section.module
+    section#team.module
         .container
 
             .row
                 .col-md-6.m-auto.text-center
-                    h1 Creative People.
-                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+                    h1 Our Team
 
             .row
                 .col-md-12
                     .space(data-MY="60px")
 
             .row
-                .col-lg-4.col-md-6
-                    +team("assets/images/team/1.jpg", "Emma Connor", "Designer")
-                .col-lg-4.col-md-6
-                    +team("assets/images/team/2.jpg", "Richard Bauer", "Developer")
-                .col-lg-4.col-md-6
-                    +team("assets/images/team/3.jpg", "John Pope", "Founder")
-                .col-lg-4.col-md-6
-                    +team("assets/images/team/4.jpg", "Sara Smith", "Designer")
-                .col-lg-4.col-md-6
-                    +team("assets/images/team/5.jpg", "Emma Connor", "Developer")
-                .col-lg-4.col-md-6
-                    +team("assets/images/team/6.jpg", "Peter Chapman", "Founder")
+              .col-lg-4.col-md-6
+              .col-lg-4.col-md-6
+                  +team("assets/kbfs/images/team/juan.jpeg", "JUAN BETANCOURT", "The Board")
+              .col-lg-4.col-md-6
 
             .row
-                .col-md-12
-                    .space(data-MY="30px")
+                .col-lg-2.col-md-6
+
+                .col-lg-4.col-md-6
+                    +team("assets/kbfs/images/team/chris.jpeg", "CHRIS JIM", "President")
+
+                .col-lg-4.col-md-6
+                    +team("assets/kbfs/images/team/habib.jpeg", "HABIB REHMAN", "Developer")
+                .col-lg-2.col-md-6
+
 
             .row
-                .col-md-12
-                    p.text-center: a(href="#" class="btn btn-circle btn-outline-brand") About Us
+                .col-lg-4.col-md-6
+                    +team("assets/kbfs/images/team/francisco.jpeg", "FRANCISCO LARANJO", "Head of Corporate Relations")
+                .col-lg-4.col-md-6
+                    +team("assets/kbfs/images/team/Alicia.jpeg", "ALICIA DE MORA LOSANA GAGO", "Head of Marketing")
+                .col-lg-4.col-md-6
+                    +team("assets/kbfs/images/team/Axelle.jpeg", "AXELLE DUJARDIN", "Head of Social Media")
+                .col-lg-4.col-md-6
+                    +team("assets/kbfs/images/team/Viktor.jpeg", "JACOB VIKTOR FINNILA", "Treasurer")
+                .col-lg-4.col-md-6
+                    +team("assets/kbfs/images/team/kay.jpeg", "KAY KAUFMANN", "Senior Associate")
+                .col-lg-4.col-md-6
+                    +team("assets/kbfs/images/team/arina.jpeg", "ARINA KURDOVA", "Senior Associate")
+                .col-lg-4.col-md-6
+                    +team("assets/kbfs/images/team/Julio.jpeg", "JULIO ALEGRIA", "Senior Associate")
+                .col-lg-4.col-md-6
+                    +team("assets/kbfs/images/team/Bartlomiej.jpeg", "BARTLOMIEJ MOZDZEN", "Senior Associate")
+                .col-lg-4.col-md-6
+                    +team("assets/kbfs/images/team/Beatrice.png", "BEATRICE MARIA ROSSI", "Senior Associate")
+
+
+            //.row
+            //    .col-md-12
+            //        .space(data-MY="30px")
+
     // Team end
 
-    = "\n"
 
-    // Testimonials
-    section.module.parallax(data-background="assets/images/module-12.jpg" data-overlay="0.5")
-        .container
-
-            .row
-                .col-md-12
-                    .space(data-MY="50px")
-
-            .row
-                .col-md-12
-                    .review-slides.owl-carousel
-                        +TestimonialsSlider("Albert Einstein", "I don't work from drawings. I don't make sketches and drawings <br/> and color sketches into a final painting.")
-                        +TestimonialsSlider("Ralph Waldo Emerson", "To be yourself in a world that is constantly trying to make you <br/> something else is the greatest accomplishment.")
-                        +TestimonialsSlider("Marilyn Monroe", "Imperfection is beauty, madness is genius and it's better to be <br/> absolutely ridiculous than absolutely boring.")
-
-            .row
-                .col-md-12
-                    .space(data-MY="50px")
-    // Testimonials end
 
     = "\n"
 
-    // Clients
-    section.module.bg-gray.p-t-0.p-b-40
+    //Clients
+    section.module.bg-gray.p-t-40.p-b-40
         .container
 
-            .space(data-MY="-60px")
 
+            //.space(data-MY="-60px")
             .row
-                +pricing("Starter", "Free", false, "ti-slice")
-                +pricing("Standard", "45", true, "ti-pin-alt")
-                +pricing("Professional", "69", true, "ti-marker-alt")
+                .col-md-6.m-auto.text-center
+                    h1 Sponsors
+
+
+
+            //.row
+            //    +pricing("Starter", "Free", false, "ti-slice")
+            //    +pricing("Standard", "45", true, "ti-pin-alt")
+            //    +pricing("Professional", "69", true, "ti-marker-alt")
 
             .row
                 .col-md-10.m-auto
-                    .owl-carousel.clients-carousel
-                        .client
-                            img(src="assets/images/clients/1.png" alt="")
-                        .client
-                            img(src="assets/images/clients/2.png" alt="")
-                        .client
-                            img(src="assets/images/clients/3.png" alt="")
-                        .client
-                            img(src="assets/images/clients/4.png" alt="")
-                        .client
-                            img(src="assets/images/clients/5.png" alt="")
-                        .client
-                            img(src="assets/images/clients/6.png" alt="")
-                        .client
-                            img(src="assets/images/clients/7.png" alt="")
-    // Clients end
+                    .client
+                        img(src="assets/kbfs/images/sponsor-logo.jpg" alt="")
+
+    //Clients end
+
+
 
     = "\n"
 
-    // Posts
-    section.module
+    // Form start
+    section#contact.module.divider-top
         .container
 
             .row
-                .col-md-6.m-auto.text-center
-                    h1 Latest articles.
-                    p.lead See how your users experience your website in realtime or view trends to see any changes in performance over time.
+                .col-lg-6.col-md-9.m-auto.text-center
+                    h1 Speak to Us
 
             .row
                 .col-md-12
                     .space(data-MY="60px")
 
-            .row.row-post-masonry
-                .col-md-4.post-item
-                    +PostMasonry("assets/images/blog/1.jpg", "Bluetooth Speaker")
-                .col-md-4.post-item
-                    +PostMasonry("assets/images/blog/3.jpg", "Minimalist Chandelier")
-                .col-md-4.post-item
-                    +PostMasonry("assets/images/blog/5.jpg", "Standard Shape")
-    // Posts end
-
-    = "\n"
-
-    // Counters
-    section.module.bg-gray.p-b-0
-        .container
-
             .row
-                .col-md-3
-                    +Counter("Happy Clients", "1538", "icon-energy icons")
-                .col-md-3
-                    +Counter("Total downloads", "2124", "icon-game-controller icons")
-                .col-md-3
-                    +Counter("Awards Won", "3128", "icon-fire icons")
-                .col-md-3
-                    +Counter("Theme Users", "9534", "icon-diamond icons")
-    // Counters end
+                .col-md-12
+                    form#contact-form(method="post" novalidate)
+                        .row
+                            .col-md-3
+                                .form-group
+                                    input.form-control(type="text" name="name" placeholder="Name" required="")
+                                    p.help-block.text-danger
+                            .col-md-3
+                                .form-group
+                                    input.form-control(type="email" name="email" placeholder="E-mail" required="")
+                                    p.help-block.text-danger
+                            .col-md-3
+                                .form-group
+                                    input.form-control(type="text" name="subject" placeholder="Subject" required="")
+                                    p.help-block.text-danger
+                            .col-md-3
+                                .form-group
+                                    input.form-control(type="text" name="position/organization" placeholder="Position / Organization" required="")
+                                    p.help-block.text-danger
+                            .col-md-12
+                                .form-group
+                                    textarea.form-control(name="message" placeholder="Message" rows="12" required="")
+                            .col-md-12
+                                p
+                                .text-center
+                                    input(type="submit" class="btn btn-circle btn-brand" value="Send Message")
+                    // Ajax response
+                    #contact-response.ajax-response.text-center
+    // Form End
 
     = "\n"
 
@@ -269,7 +271,6 @@ append content
 
             .row
                 .col-md-12
-                    img(src="assets/images/module-18.jpg" alt="")
+                    img(src="assets/kbfs/images/bushhoueEntrance.jpg" height="200px" alt="")
     // Image end
-
 

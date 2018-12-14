@@ -1,0 +1,493 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title King's Banking and Finance Society
+    // Favicons
+    link(rel='shortcut icon', href='assets/kbfs/images/emblem_vector.jpg')
+    link(rel='apple-touch-icon', href='assets/images/apple-touch-icon.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='assets/images/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='assets/images/apple-touch-icon-114x114.png')
+    // Web Fonts
+    link(href='https://fonts.googleapis.com/css?family=Poppins:400,500,600%7cPlayfair+Display:400i', rel='stylesheet')
+    link(href='https://use.fontawesome.com/releases/v5.0.6/css/all.css', rel='stylesheet')
+    // Plugins
+    link(href='assets/css/plugins.min.css', rel='stylesheet')
+    // Template core CSS
+    link(href='assets/css/template.css', rel='stylesheet')
+  body
+    #fb-root
+    script.
+      (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2';
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    // Preloader
+    .page-loader
+      .page-loader-inner
+        .spinner
+          .double-bounce1
+          .double-bounce2
+    // Preloader end
+    // <a class="navbar-brand" href="#">
+    // <img src="assets/kbfs/images/kbfs_logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+    // 
+    // </a>
+    // <img src="assets/kbfs/images/kbfs_logo.svg">
+    // Header
+    header.header.header-transparent
+      .container-fluid
+        // Brand
+        .inner-header
+          a.inner-brand(href='index.html')
+            img(src='assets/kbfs/images/kbfs_logo.svg', width='200', height='200')
+        // Navigation
+        .inner-navigation.collapse
+          .inner-nav
+            ul
+              li.menu-item-has-children.menu-item-has-mega-menu
+                a(href='#')
+                  span.menu-item-span Home
+              li.menu-item-has-children.menu-item-has-mega-menu
+                a(href='#about-us')
+                  span.menu-item-span About Us
+              li.menu-item-has-children.menu-item-has-mega-menu
+                a(href='#team')
+                  span.menu-item-span Our Team
+              li.menu-item-has-children
+                a(href='#whatwedo')
+                  span.menu-item-span What we do
+              li.menu-item-has-children
+                a(href='#events')
+                  span.menu-item-span Events
+              li.menu-item-has-children
+                a(href='#contact')
+                  span.menu-item-span Contact
+        .extra-nav
+          ul
+            li.nav-toggle
+              a(href='#', data-toggle='collapse', data-target='.inner-navigation')
+                span.menu-item-span
+                  i.ti-menu
+    // Header end
+    // Wrapper
+    .wrapper
+      // Hero
+      section.module-cover.parallax.text-center.fullscreen(data-background='assets/kbfs/images/kbfs_banner.jpg', data-overlay='0.6')
+        .container
+          .row
+            .col-md-12
+              h1.m-b-20
+                strong King's Banking and Finance Society
+              p
+                a.btn.btn-lg.btn-circle.btn-brand(href='https://www.kclsu.org/organisation/kbfs/') Become a Member
+      // Hero end
+      // About
+      section#about-us.module.divider-bottom
+        .container
+          .row
+            .col-md-6.m-auto.text-center
+              h1
+                | We connect King’s top talent like yourself to top financial firms and support you every
+                | step of the way in your application journey and beyond.
+              p.lead
+                | Our events promote career opportunities and provide insight into the
+                | industries and their respective recruitment processes, equipping members with key
+                | knowledge to pursue their career aspirations in the most competitive graduate job
+                | sector.
+          .row
+            .col-md-12
+              .space(data-my='60px')
+          .row
+            .col-md-12
+              p
+                img(src='assets/kbfs/images/bushhouse.jpg', alt='')
+          .row
+            .col-md-12
+              .space(data-my='30px')
+      // About end
+      // Counters
+      section.module.bg-gray.p-b-0
+        .row
+          .col-md-6.m-auto.text-center
+            h1 Statistics
+        .container
+          .row
+            .col-md-3
+              .counter
+                .counter-icon
+                  span.icon-energy.icons
+                .counter-number
+                  h6
+                    strong.counter-timer(data-from='0', data-to='2800')
+                .counter-title Active Members
+            .col-md-3
+              .counter
+                .counter-icon
+                  span.icon-energy.icons
+                .counter-number
+                  h6
+                    strong.counter-timer(data-from='0', data-to='100') 0
+                .counter-title Events Hosted
+            .col-md-3
+              .counter
+                .counter-icon
+                  span.icon-energy.icons
+                .counter-number
+                  h6
+                    strong.counter-timer(data-from='0', data-to='5000') 0
+                .counter-title In Attendance
+            .col-md-3
+              .counter
+                .counter-icon
+                  span.icon-energy.icons
+                .counter-number
+                  h6
+                    strong.counter-timer(data-from='0', data-to='100') 0
+                .counter-title Alumnus
+      // Counters end
+      // Team
+      section#team.module
+        .container
+          .row
+            .col-md-6.m-auto.text-center
+              h1 Our Team
+          .row
+            .col-md-12
+              .space(data-my='60px')
+          .row
+            .col-lg-2.col-md-6
+              .team-item
+                .team-image
+                  img(src='assets/kbfs/images/team/chris.jpeg', alt='')
+                  .team-wrap
+                    .team-content
+                      h6.team-name CHRIS JIM
+                      .team-role President
+            .col-lg-2.col-md-6
+              .team-item
+                .team-image
+                  img(src='assets/kbfs/images/team/habib.jpeg', alt='')
+                  .team-wrap
+                    .team-content
+                      h6.team-name HABIB REHMAN
+                      .team-role Vice President
+                    .team-content-social
+            .col-lg-2.col-md-6
+              .team-item
+                .team-image
+                  img(src='assets/kbfs/images/team/juan.jpeg', alt='')
+                  .team-wrap
+                    .team-content
+                      h6.team-name JUAN BETANCOURT
+                      .team-role The Board
+                    .team-content-social
+            .col-lg-2.col-md-6
+              .team-item
+                .team-image
+                  img(src='assets/kbfs/images/team/francisco.jpeg', alt='')
+                  .team-wrap
+                    .team-content
+                      h6.team-name FRANCISCO LARANJO
+                      .team-role Head of Corporate Relations
+                    .team-content-social
+            .col-lg-2.col-md-6
+              .team-item
+                .team-image
+                  img(src='assets/kbfs/images/team/Alicia.jpeg', alt='')
+                  .team-wrap
+                    .team-content
+                      h6.team-name ALICIA DE MORA LOSANA GAGO
+                      .team-role Head of Marketing
+                    .team-content-social
+            .col-lg-2.col-md-6
+              .team-item
+                .team-image
+                  img(src='assets/kbfs/images/team/Axelle.jpeg', alt='')
+                  .team-wrap
+                    .team-content
+                      h6.team-name AXELLE DUJARDIN
+                      .team-role Head of Social Media
+                    .team-content-social
+            .col-lg-2.col-md-6
+              .team-item
+                .team-image
+                  img(src='assets/kbfs/images/team/Viktor.jpeg', alt='')
+                  .team-wrap
+                    .team-content
+                      h6.team-name JACOB "VIKTOR" FINNILA
+                      .team-role Treasurer
+                    .team-content-social
+            .col-lg-2.col-md-6
+              .team-item
+                .team-image
+                  img(src='assets/kbfs/images/team/kay.jpeg', alt='')
+                  .team-wrap
+                    .team-content
+                      h6.team-name KAY KAUFMANN
+                      .team-role Senior Associate
+                    .team-content-social
+            .col-lg-2.col-md-6
+              .team-item
+                .team-image
+                  img(src='assets/kbfs/images/team/arina.jpeg', alt='')
+                  .team-wrap
+                    .team-content
+                      h6.team-name ARINA KURDOVA
+                      .team-role Senior Associate
+                    .team-content-social
+            .col-lg-2.col-md-6
+              .team-item
+                .team-image
+                  img(src='assets/kbfs/images/team/Julio.jpeg', alt='')
+                  .team-wrap
+                    .team-content
+                      h6.team-name JULIO ALEGRIA
+                      .team-role Senior Associate
+                    .team-content-social
+            .col-lg-2.col-md-6
+              .team-item
+                .team-image
+                  img(src='assets/kbfs/images/team/Bartlomiej.jpeg', alt='')
+                  .team-wrap
+                    .team-content
+                      h6.team-name BARTLOMIEJ MOZDZEN
+                      .team-role Senior Associate
+                    .team-content-social
+            .col-lg-2.col-md-6
+              .team-item
+                .team-image
+                  img(src='assets/kbfs/images/team/Beatrice.png', alt='')
+                  .team-wrap
+                    .team-content
+                      h6.team-name BEATRICE MARIA ROSSI
+                      .team-role Senior Associate
+                    .team-content-social
+      // Team end
+      // Services
+      section#whatwedo.module
+        .row
+          .col-md-6.m-auto.text-center
+            h1 What we do 
+            br
+        .container
+          .row
+            .col-lg-4.col-md-6
+              .icon-box
+                .icon-box-icon
+                  img(src='assets/kbfs/images/emblem_vector.jpg', width='50', height='50')
+                .icon-box-title
+                  h6 Collaborate
+                .icon-box-content
+                  ul
+                    li • Collaboration with other major societies on campus
+                    li • Application (CV, Cover Letter) and technical workshops
+                    li • LinkedIn Masterclass
+            .col-lg-4.col-md-6
+              .icon-box
+                .icon-box-icon
+                  img(src='assets/kbfs/images/emblem_vector.jpg', width='50', height='50')
+                .icon-box-title
+                  h6 Network
+                .icon-box-content
+                  ul
+                    li • Invite speakers from Banking and Finance firms to host panels
+                    li • Informal networking meetups every single month
+                    li • Socials every single month (e.g. financial movie nights)
+            .col-lg-4.col-md-6
+              .icon-box
+                .icon-box-icon
+                  img(src='assets/kbfs/images/emblem_vector.jpg', width='50', height='50')
+                .icon-box-title
+                  h6 Provide
+                .icon-box-content
+                  ul
+                    li
+                      | • Provide exclusive insight into specific divisions and the recruitment
+                      | process
+                    li • Promote timely career opportunities
+      // Services end
+      // Start of Sponsors Section
+      section.module.p-b-0
+        .container
+          .row
+            .col-md-6.m-auto.text-center
+              h1 Our Sponsors
+              br
+              img(src='assets/kbfs/images/bright_network_logo.jpg', width='250', height='20', alt='')
+          .row
+            .col-md-12
+              .space(data-my='40px')
+      br
+      br
+      // End of Sponsors Section
+      // Start of Events Section
+      #events.row
+        .col-md-6.m-auto.text-center
+          h1 Events
+          br
+          a(href='https://www.eventbrite.co.uk/o/kings-banking-amp-finance-society-18123728208')
+            button.btn.btn-danger.btn-lg.eventsb(type='button')
+              strong
+                | Upcoming
+                | Events
+              i.fas.fa-external-link-alt
+          br
+          br
+          // Start of fb widget
+          #fbkbfs
+            .fb-page(data-href='https://www.facebook.com/kingsbfs/', data-tabs='events', data-width='700', data-small-header='false', data-adapt-container-width='true', data-hide-cover='false', data-show-facepile='true')
+              blockquote.fb-xfbml-parse-ignore(cite='https://www.facebook.com/kingsbfs/')
+                a(href='https://www.facebook.com/kingsbfs/')
+                  | King's
+                  | Banking & Finance
+                  | Society
+      br
+      br
+      // End of fb widget
+      // End of Events Section
+      // &lt;!&ndash; Image&ndash;&gt;
+      // <section class="module no-gutters p-0">
+      // <div class="container-fluid">
+      // <div class="row">
+      // <div class="col-md-12"><img src="assets/kbfs/images/bushhoueEntrance.jpg"  height="300" alt=""></div>
+      // </div>
+      // </div>
+      // </section>
+      // &lt;!&ndash; Image end&ndash;&gt;
+      // Start of Contact Section
+      section#contact.module.divider-top
+        .container
+          .row
+            .col-lg-6.col-md-9.m-auto.text-center
+              h1 Speak to Us
+          .row
+            .col-md-12
+              .space(data-my='60px', style='margin-top: 60px;')
+          .row
+            .col-md-8.m-auto
+              form#contact-form(method='post', novalidate='')
+                .row
+                  .col-md-6
+                    .form-group
+                      input.form-control(type='text', name='name', placeholder='Name', required='')
+                      p.help-block.text-danger
+                  .col-md-6
+                    .form-group
+                      input.form-control(type='email', name='email', placeholder='E-mail', required='')
+                      p.help-block.text-danger
+                  .col-md-12
+                    .form-group
+                      input.form-control(type='text', name='subject', placeholder='Subject', required='')
+                      p.help-block.text-danger
+                  .col-md-12
+                    .form-group
+                      input.form-control(type='text', name='position', placeholder='Position / Organization', required='')
+                      p.help-block.text-danger
+                  .col-md-12
+                    .form-group
+                      textarea.form-control(name='message', placeholder='Message', rows='12', required='')
+                  .col-md-12
+                    p
+                      input.btn.btn-block.btn-brand(type='submit', value='Send Message')
+              // Ajax response
+              #contact-response.ajax-response.text-center
+      // End of Contact Section
+      // Footer
+      footer.footer
+        .footer-bar
+          .container
+            .row
+              .col-md-12
+                .copyright
+                  p © 2018, All Rights Reserved.
+                  ul.social-icons
+                    li
+                      a(href='https://twitter.com/KingsBFS')
+                        i.fab.fa-twitter
+                    li
+                      a(href='https://www.instagram.com/Kings.BFS')
+                        i.fab.fa-instagram
+                    li
+                      a(href='https://www.facebook.com/KingsBFS/')
+                        i.fab.fa-facebook-f
+                    li
+                      a(href='https://www.linkedin.com/company/KBFS')
+                        i.fab.fa-linkedin
+      // Footer end
+      // Wrapper end
+      // Off canvas
+      .off-canvas-sidebar
+        .off-canvas-sidebar-wrapper
+          .off-canvas-header
+            a.off-canvas-close(href='#')
+              span.ti-close
+          .off-canvas-content
+            // Text widget
+            aside.widget.widget-text
+              .textwidget
+                p.text-center
+                  img(src='assets/images/logo-light-2.png', alt='', width='80px')
+                p.text-center See how users experience your website in realtime to see changes.
+            // Recent portfolio widget
+            aside.widget.widget-recent-works
+              ul
+                li
+                  a(href='#')
+                    img(src='assets/images/widgets/1.jpg', alt='')
+                li
+                  a(href='#')
+                    img(src='assets/images/widgets/2.jpg', alt='')
+                li
+                  a(href='#')
+                    img(src='assets/images/widgets/3.jpg', alt='')
+                li
+                  a(href='#')
+                    img(src='assets/images/widgets/4.jpg', alt='')
+                li
+                  a(href='#')
+                    img(src='assets/images/widgets/5.jpg', alt='')
+                li
+                  a(href='#')
+                    img(src='assets/images/widgets/6.jpg', alt='')
+                li
+                  a(href='#')
+                    img(src='assets/images/widgets/7.jpg', alt='')
+                li
+                  a(href='#')
+                    img(src='assets/images/widgets/8.jpg', alt='')
+                li
+                  a(href='#')
+                    img(src='assets/images/widgets/9.jpg', alt='')
+            // Social Icons
+            ul.social-icons.text-center
+              li
+                a(href='#')
+                  i.fab.fa-twitter
+              li
+                a(href='#')
+                  i.fab.fa-instagram
+              li
+                a(href='#')
+                  i.fab.fa-facebook-f
+              li
+                a(href='#')
+                  i.fab.fa-pinterest-p
+      // Off canvas end
+      // To top button
+      a.scroll-top(href='#top')
+        i.fas.fa-angle-up
+      // Scripts
+      script(src='assets/js/custom/jquery-3.2.1.min.js')
+      script(src='assets/js/custom/popper.min.js')
+      script(src='assets/js/bootstrap/bootstrap.min.js')
+      script(src='http://maps.googleapis.com/maps/api/js?key=AIzaSyA0rANX07hh6ASNKdBr4mZH0KZSqbHYc3Q')
+      script(src='assets/js/custom/plugins.min.js')
+      script(src='assets/js/custom/custom.min.js')

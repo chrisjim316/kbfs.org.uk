@@ -4,10 +4,9 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        meta(name="description" content="")
-        meta(name="author" content="")
+        meta(name="description" content="King’s Banking & Finance Society is the largest finance and banking society in King’s College London. We help you navigate the world of banking and finance.")
 
-        title Boomerang - Template
+        title King's Banking and Finance Society
 
         block vars
 
@@ -51,8 +50,9 @@ html(lang="en")
 
                 // Brand
                 .inner-header
-                    a.inner-brand(href="index.html")
-                        |Boomerang
+                    a.inner-brand(href="/")
+                        //img(src="assets/kbfs/images/kbfs_logo (1).png" alt="")
+
 
                 // Navigation
                 .inner-navigation.collapse
@@ -61,21 +61,6 @@ html(lang="en")
                     else
                         include navigation/navigation-single
 
-                .extra-nav
-                    ul
-                        if ( header_one_page !== true )
-                            li
-                                a(href="shop-cart-1.html" class="top-bar-cart")
-                                    span.menu-item-span #[i.ti-shopping-cart]
-                                        span 3
-                        li
-                            a(href="#" class="off-canvas-open")
-                                span.menu-item-span #[i.ti-menu]
-
-                        //- Do not remove this item (mobile menu toggle)
-                        li.nav-toggle
-                            a(href="#" data-toggle="collapse" data-target=".inner-navigation")
-                                span.menu-item-span #[i.ti-menu]
         // Header end
 
         = "\n"
