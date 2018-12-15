@@ -61,22 +61,12 @@ html(lang="en")
         if ( header_transparent == true )
             - var header_classes = "header-transparent"
 
-        // Header
-        header.header(class=header_classes)
-            .container-fluid
-
-                // Brand
-                .inner-header
-                    a.inner-brand(href="/")
-                        //img(src="assets/kbfs/images/kbfs_logo (1).png" alt="")
-
-
-                // Navigation
-                .inner-navigation.collapse
-                    if ( header_one_page !== true )
-                        include navigation/navigation
-                    else
-                        include navigation/navigation-single
+        
+        // Navigation
+        if ( header_one_page !== true )
+            include navigation/navigation
+        else
+            include navigation/navigation-single
 
         // Header end
 
