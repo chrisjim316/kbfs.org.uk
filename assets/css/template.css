@@ -10516,7 +10516,7 @@ pre[class*=language-] {
 }
 
 .serif {
-    font-family: "Vollkorn", serif;
+    font-family: "Playfair Display", sans-serif;
     letter-spacing: .03125rem;
     font-style: italic;
 }
@@ -10890,6 +10890,7 @@ img.img-shadow,
     padding: 20px;
     opacity: .6;
     transition: all .3s ease-in-out;
+    width: 9.375rem;
 }
 
 .client img {
@@ -11198,7 +11199,7 @@ img.img-shadow,
     width: 100%;
     bottom: 0;
     padding: 20px;
-    transform: translateY(-10px);
+    background-color: rgba(0, 0, 0, .4);
 }
 
 .team-name {
@@ -11208,7 +11209,7 @@ img.img-shadow,
 
 .team-role {
     font-size: .75rem;
-    opacity: .6;
+    opacity: .8;
 }
 
 .team-name,
@@ -11244,11 +11245,6 @@ img.img-shadow,
 
 .team-item:hover .team-wrap {
     opacity: 1;
-}
-
-.team-item:hover .team-content,
-.team-item:hover .team-content-social {
-    transform: translateY(0);
 }
 
 .review-slides {

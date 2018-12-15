@@ -147,11 +147,10 @@ mixin PieChart(title, counter)
 mixin team(image, name, role)
     .team-item
         .team-image
-            img(src=image alt="")
-            .team-wrap
-                .team-content
-                    h6.team-name= name
-                    .team-role= role
+            img(src=image alt=name)
+        .team-content
+            h6.team-name= name
+            .team-role= role
 
 //------------------------------------------------------------------
 //- Portfolio

@@ -37,7 +37,7 @@
     width: 100%;
     bottom: 0;
     padding: 20px;
-    transform: translateY(-10px);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .team-name {
@@ -47,7 +47,7 @@
 
 .team-role {
     font-size: rem(12px);
-    opacity: .6;
+    opacity: .8;
 }
 
 .team-name,
@@ -82,10 +82,5 @@
 
     .team-wrap {
         opacity: 1;
-    }
-
-    .team-content,
-    .team-content-social {
-        transform: translateY(0);
     }
 }
