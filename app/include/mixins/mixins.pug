@@ -255,23 +255,21 @@ mixin Feature(thumb, title, content)
 //- Pricing Table
 //------------------------------------------------------------------
 
-mixin pricing(title, price, type, icon)
-    if type
-        - var class_type = "pricing-popular"
-    .col-md-4.pricing-wrapper( class = class_type )
+mixin pricing(title, price, features)
+    .col-md-4.pricing-wrapper
         .pricing-header
-            if icon
-                .pricing-icon
-                    i( class = icon )
             .pricing-title= title
         .pricing-price
-            if type
-                span $
-            = price
+              span £
+              = price
         .pricing-body
-            p Map where your photos<br>were taken and discover local<br>points of interest.
-        .pricing-footer
-            a(href="#" class="btn btn-circle btn-brand") Download
+            ul
+              each feature in features
+                li
+                  i.ti-check
+                  = feature
+        .pricing-footer.mt-auto
+            a(href="#" class="btn btn-brand") Buy
 
 //------------------------------------------------------------------
 //- Shop Grid Item

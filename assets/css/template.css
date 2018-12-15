@@ -11519,11 +11519,15 @@ img.img-shadow,
 }
 
 .pricing-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
     position: relative;
     background: #fff;
     border: 1px solid #f0f0f0;
     text-align: center;
-    padding: 0 50px;
+    padding: 0 40px;
     margin: 0 0 30px;
     transition: .3s ease-in-out;
 }
@@ -11557,7 +11561,8 @@ img.img-shadow,
 .pricing-title {
     text-transform: uppercase;
     letter-spacing: .0625rem;
-    font-size: .6875rem;
+    font-size: 2.1875rem;
+    font-family: "Playfair Display", sans-serif;
     margin: 0;
 }
 
@@ -11579,7 +11584,7 @@ img.img-shadow,
 .pricing-price > span {
     position: absolute;
     display: block;
-    left: -15px;
+    left: 35%;
     top: 28px;
     font-size: 1.125rem;
 }
@@ -11599,6 +11604,12 @@ img.img-shadow,
 
 .pricing-wrapper .pricing-body {
     color: #788487;
+    text-align: left;
+}
+
+.pricing-body ul i {
+    margin-right: .25rem;
+    color: #0f284f;
 }
 
 .pie-chart {

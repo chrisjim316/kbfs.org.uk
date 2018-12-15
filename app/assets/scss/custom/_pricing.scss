@@ -3,11 +3,13 @@
 //
 
 .pricing-wrapper {
+    display: flex;
+    flex-direction: column;
     position: relative;
     background: $pricing-background;
     border: 1px solid $pricing-border-color;
     text-align: center;
-    padding: 0 50px;
+    padding: 0 40px;
     margin: 0 0 30px;
     transition: 0.3s ease-in-out;
 
@@ -41,7 +43,8 @@
 .pricing-title {
     text-transform: uppercase;
     letter-spacing: rem(1px);
-    font-size: rem(11px);
+    font-size: rem(35px);
+    font-family: $font-family-serif;
     margin: 0;
 }
 
@@ -62,7 +65,7 @@
     > span {
         position: absolute;
         display: block;
-        left: -15px;
+        left: 35%;
         top: 28px;
         font-size: rem(18px);
     }
@@ -83,5 +86,10 @@
 
 .pricing-wrapper .pricing-body {
     color: $body-color;
+    text-align: left;
 }
 
+.pricing-body ul i {
+  margin-right: rem(4px);
+  color: theme-color("brand");
+}
