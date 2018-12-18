@@ -167,12 +167,20 @@ append content
 
   // Events
   section#events.module.divider-top
-    .container
+    .container-fluid
       .row
         .col-md-6.m-auto.text-center
           h1 Our Events
-          p.lead Upcoming events
-          p Coming soon
+      .row
+        .col-md-6.m-auto.text-center
+          h5 Upcoming events
+      .row
+        .col-md-10.m-auto#upcoming-events
+      .row
+        .col-md-6.m-auto.text-center
+          h5 Past events
+      .row
+        .col-md-10.m-auto#past-events
   // Events end
 
 

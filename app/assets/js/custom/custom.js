@@ -43,7 +43,9 @@
             review_slides      = $('.review-slides'),
             review_carousel    = $('.review-carousel'),
             image_slider       = $('.image-slider'),
-            contact_form       = $('#contact-form');
+            contact_form       = $('#contact-form'),
+            FB_PAGE_EVENTS_ENDPOINT = 'https://graph.facebook.com/v3.2/1398145177083309/events',
+            FBAT = 'EAAINsEm9qZCQBAP75MWh2Vp83trUlioikvuNVUfBYzpHIDS5ZBxnByMPYlZAxpiwHrUpVyl9rvHICruPGkZC5TDtgfVHBs4ro1OxRJZBNudhN68jr3SIVrWRDbdSUM4nB14AZCkHaMtcuqZBAPJ7QM7fBZBz5MymmFjMSyKUcOhrMAZDZD';
 
         /* ---------------------------------------------- /*
          * Collapse navbar on click
@@ -635,6 +637,46 @@
         parallax.jarallax({
             speed: 0.4,
         });
+
+        /* ---------------------------------------------- /*
+         * Events
+        /* ---------------------------------------------- */
+
+        function createEventsHtml(events) {
+          return events.map(function (event) {
+            var time = moment(event['end_time']);
+            var eventFBLink = 'https://www.facebook.com/events/'+event['id'];
+            return '<div class="row event"><div class="col-1"><div class="date-day">'+time.format('DD')+'</div><div class="date-month">'+time.format('MMM')+'</div></div><div class="col-8"><div class="event-name">'+event['name']+'</div><div>'+event['description'].substring(0, 80)+'... <a href="'+eventFBLink+'" target="_blank">See more</a></div></div><div class="col d-flex justify-content-end"><a class="btn btn-lg" href="'+eventFBLink+'" target="_blank">Get Tickets</a></div></div>';
+          }).join('')
+        }
+
+        function getEvents(type) {
+          $.ajax({
+              type: 'GET',
+              url: FB_PAGE_EVENTS_ENDPOINT,
+              dataType: 'json',
+              data: {
+                  'time_filter': type,
+                  'access_token': FBAT
+              },
+              cache: false,
+              success: function(result) {
+                  var eventEl = $('#'+type+'-events');
+                  if(result.hasOwnProperty('data') && result.data.length) {
+                    // Got events
+                    var html = createEventsHtml(result['data']);
+                    eventEl.append(html);
+                  } else {
+                    // Failed to load/no events
+                    eventEl.addClass('text-center').html('<p>Events coming soon. Follow us on social media to get notified of new events.</p>')
+                  }
+              }
+          });
+        }
+
+        getEvents('past');
+        getEvents('upcoming');
+
 
     });
 
