@@ -44,8 +44,8 @@
             review_carousel    = $('.review-carousel'),
             image_slider       = $('.image-slider'),
             contact_form       = $('#contact-form'),
-            FB_PAGE_EVENTS_ENDPOINT = 'https://graph.facebook.com/v3.2/1398145177083309/events',
-            FBAT = 'EAAINsEm9qZCQBAP75MWh2Vp83trUlioikvuNVUfBYzpHIDS5ZBxnByMPYlZAxpiwHrUpVyl9rvHICruPGkZC5TDtgfVHBs4ro1OxRJZBNudhN68jr3SIVrWRDbdSUM4nB14AZCkHaMtcuqZBAPJ7QM7fBZBz5MymmFjMSyKUcOhrMAZDZD';
+            FB_PAGE_EVENTS_ENDPOINT = 'https://graph.facebook.com/v3.2/1398145177083309/events?callback=?',
+            FBAT = 'ADD_ACCESS_TOKEN_HERE';
 
         /* ---------------------------------------------- /*
          * Collapse navbar on click
@@ -651,25 +651,18 @@
         }
 
         function getEvents(type) {
-          $.ajax({
-              type: 'GET',
-              url: FB_PAGE_EVENTS_ENDPOINT,
-              dataType: 'json',
-              data: {
+          $.getJSON( FB_PAGE_EVENTS_ENDPOINT,{
                   'time_filter': type,
                   'access_token': FBAT
-              },
-              cache: false,
-              success: function(result) {
-                  var eventEl = $('#'+type+'-events');
-                  if(result.hasOwnProperty('data') && result.data.length) {
-                    // Got events
-                    var html = createEventsHtml(result['data']);
-                    eventEl.append(html);
-                  } else {
-                    // Failed to load/no events
-                    eventEl.addClass('text-center').html('<p>Events coming soon. Follow us on social media to get notified of new events.</p>')
-                  }
+          }, function(result) {
+              var eventEl = $('#'+type+'-events');
+              if(result.hasOwnProperty('data') && result.data.length) {
+                // Got events
+                var html = createEventsHtml(result['data']);
+                eventEl.append(html);
+              } else {
+                // Failed to load/no events
+                eventEl.addClass('text-center').html('<p>Events coming soon. Follow us on social media to get notified of new events.</p>')
               }
           });
         }
