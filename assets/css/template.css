@@ -10813,6 +10813,10 @@ pre[class*=language-] {
     margin-bottom: 0;
 }
 
+@-ms-viewport {
+    width: device-width;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -13777,7 +13781,7 @@ body.off-canvas-sidebar-open:after {
 
 @media (max-width: 991px) {
     .event {
-        margin-left: .3125rem;
+        margin-left: .25rem;
     }
 }
 
