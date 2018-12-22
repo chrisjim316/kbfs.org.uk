@@ -2,6 +2,10 @@
 // Base
 //
 
+@-ms-viewport{
+  width: device-width;
+}
+
 body {
     overflow-x: hidden;
 }
