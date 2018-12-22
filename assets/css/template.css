@@ -12179,6 +12179,7 @@ img.img-shadow,
 
     .inner-nav > ul > li {
         float: none;
+        padding: 0 15px !important;
     }
 
     .inner-nav > ul > li > a {
