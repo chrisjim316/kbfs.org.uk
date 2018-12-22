@@ -185,13 +185,10 @@
 
     .inner-brand {
         color: $header-transparent-link-clr;
+        display: inline-block;
 
-        .brand-dark {
-            display: none;
-        }
-
-        .brand-light {
-            display: inline-block;
+        img {
+          width: rem(200px);
         }
     }
 
@@ -251,10 +248,15 @@
     .inner-nav > ul > li > a {
         color: $header-small-link-clr;
 
-        &:hover,
-        &.active {
-            color: $header-small-link-clr-hvr;
+        @media (min-width: 991px) {
+          &:hover,
+          &.active {
+              color: $header-small-link-clr-hvr;
+
+          }
         }
+
+
     }
 
     .extra-nav > ul > li:first-child {

@@ -11964,14 +11964,11 @@ img.img-shadow,
 
 .header.header-transparent .inner-brand {
     color: #fff;
-}
-
-.header.header-transparent .inner-brand .brand-dark {
-    display: none;
-}
-
-.header.header-transparent .inner-brand .brand-light {
     display: inline-block;
+}
+
+.header.header-transparent .inner-brand img {
+    width: 12.5rem;
 }
 
 .header.header-transparent .extra-nav > ul > li > a,
@@ -12038,15 +12035,17 @@ img.img-shadow,
     color: #222;
 }
 
-.header .extra-nav > ul > li > a:hover,
-.header .extra-nav > ul > li > a.active,
-.header .inner-nav > ul > li > a:hover,
-.header .inner-nav > ul > li > a.active,
-.header.header-small .extra-nav > ul > li > a:hover,
-.header.header-small .extra-nav > ul > li > a.active,
-.header.header-small .inner-nav > ul > li > a:hover,
-.header.header-small .inner-nav > ul > li > a.active {
-    color: rgba(34, 34, 34, .65);
+@media (min-width: 991px) {
+    .header .extra-nav > ul > li > a:hover,
+    .header .extra-nav > ul > li > a.active,
+    .header .inner-nav > ul > li > a:hover,
+    .header .inner-nav > ul > li > a.active,
+    .header.header-small .extra-nav > ul > li > a:hover,
+    .header.header-small .extra-nav > ul > li > a.active,
+    .header.header-small .inner-nav > ul > li > a:hover,
+    .header.header-small .inner-nav > ul > li > a.active {
+        color: rgba(34, 34, 34, .65);
+    }
 }
 
 .header .extra-nav > ul > li:first-child,
@@ -13774,6 +13773,12 @@ body.off-canvas-sidebar-open:after {
     padding-bottom: .5rem;
     border-bottom: 1px solid #f0f0f0;
     margin-bottom: 1.25rem;
+}
+
+@media (max-width: 991px) {
+    .event {
+        margin-left: .3125rem;
+    }
 }
 
 .event .date-day {
