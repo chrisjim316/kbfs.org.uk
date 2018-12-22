@@ -11576,7 +11576,8 @@ img.img-shadow,
     text-transform: uppercase;
     letter-spacing: .0625rem;
     font-size: 2.1875rem;
-    font-family: "Playfair Display", sans-serif;
+    font-family: "Playfair Display", sans-serif !important;
+    font-style: italic;
     margin: 0;
 }
 
@@ -13781,5 +13782,5 @@ body.off-canvas-sidebar-open:after {
 .event .event-name {
     font-size: 1.25rem;
     color: #333;
-    font-family: "Playfair Display", sans-serif;
+    font-family: "Playfair Display", sans-serif !important;
 }

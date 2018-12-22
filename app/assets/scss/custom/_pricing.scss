@@ -44,7 +44,8 @@
     text-transform: uppercase;
     letter-spacing: rem(1px);
     font-size: rem(35px);
-    font-family: $font-family-serif;
+    font-family: $font-family-serif !important;
+    font-style: italic;
     margin: 0;
 }
 
