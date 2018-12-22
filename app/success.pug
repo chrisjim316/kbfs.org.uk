@@ -1,0 +1,32 @@
+extends include/templates/layout
+
+block vars
+  - var header_transparent = true;
+
+append css
+
+append content
+
+  // Hero
+  section.module-cover.parallax.text-center.fullscreen(data-background="/assets/images/kbfs_banner.jpg" data-overlay="0.65")
+    .container
+
+      .row
+        .col-md-12
+          h1.m-b-20: strong Thank you for joining us!
+          p.lead
+            a(href="/#upcoming-events" class="btn btn-lg btn-brand") Signup for upcoming events
+          ul.social-icons
+            li
+              a(href='https://twitter.com/KingsBFS')
+                i.fab.fa-twitter
+            li
+              a(href='https://www.instagram.com/Kings.BFS')
+                i.fab.fa-instagram
+            li
+              a(href='https://www.facebook.com/KingsBFS/')
+                i.fab.fa-facebook-f
+            li
+              a(href='https://www.linkedin.com/company/KBFS')
+                i.fab.fa-linkedin
+  // Hero end

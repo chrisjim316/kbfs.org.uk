@@ -11,11 +11,9 @@
     /* ---------------------------------------------- */
 
     $(window).on('load', function() {
-
         if($('div').is('.page-loader')) {
             $('.page-loader').delay(500).fadeOut(800);
         }
-
     });
 
     $(document).ready(function() {
@@ -44,8 +42,28 @@
             review_carousel    = $('.review-carousel'),
             image_slider       = $('.image-slider'),
             contact_form       = $('#contact-form'),
+            checkout_error       = $('#checkout-error'),
+            x_ms_checkout_btn       = $('#X-checkout'),
+            exec_ms_checkout_btn       = $('#EXEC-checkout'),
+            lux_ms_checkout_btn       = $('#LUX-checkout'),
             FB_PAGE_EVENTS_ENDPOINT = 'https://graph.facebook.com/v3.2/1398145177083309/events?callback=?',
             FBAT = 'EAAHGeuyTjv0BAAnq5CZC43vlz5V2yuUk9ZBTkYaZBTQn96qkQEXt3Cymf52C6Wwe4sWvGacKVCj7PYJZAq5m0ZAJ6llVFyZBXPWRMU7jbrVky342Ntue63CBRdZAafp9wZA5TC2GYj3QoQQZBH5ELXBcyU9RmFozIjFmYC2yA5eOPZC0ayCwruHWXi';
+
+        /* ---------------------------------------------- /*
+         * Utils
+        /* ---------------------------------------------- */
+
+        function getQueryStringParam(name) {
+         name = name.replace(/[\[\]]/g, '\\$&');
+         var url = window.location.href;
+         var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+           results = regex.exec(url);
+         if (!results)
+           return null;
+         if (!results[2])
+           return '';
+         return decodeURIComponent(results[2].replace(/\+/g, ' '));
+       }
 
         /* ---------------------------------------------- /*
          * Collapse navbar on click
@@ -674,6 +692,82 @@
         getEvents('past', false);
         getEvents('upcoming', true);
 
+        /* ---------------------------------------------- /*
+         * Memberships
+        /* ---------------------------------------------- */
+
+        // if (getQueryStringParam('checkout') === 'canceled') {
+        //   console.log('cancelled');
+        //   checkout_error.removeClass('d-none');
+        // }
+
+        var stripe = Stripe('pk_test_Do1DWrarOVMDX2E5IIfb433c', {
+          betas: ['checkout_beta_4']
+        });
+
+        x_ms_checkout_btn.click(function () {
+          // When the customer clicks on the button, redirect
+          // them to Checkout.
+          stripe.redirectToCheckout({
+            items: [{plan: 'plan_ECP6B8D7gRPCP5', quantity: 1}],
+
+            // Note that it is not guaranteed your customers will be redirected to this
+            // URL *100%* of the time, it's possible that they could e.g. close the
+            // tab between form submission and the redirect.
+            successUrl: 'https://kbfs.org.uk/success',
+            cancelUrl: 'https://kbfs.org.uk',
+          })
+          .then(function (result) {
+            if (result.error) {
+              // If `redirectToCheckout` fails due to a browser or network
+              // error, display the localized error message to your customer.
+              checkout_error.text(result.error.message).removeClass('d-none');
+            }
+          });
+        });
+
+        exec_ms_checkout_btn.click(function () {
+          // When the customer clicks on the button, redirect
+          // them to Checkout.
+          stripe.redirectToCheckout({
+            items: [{plan: 'plan_ECO7UnUs5MPYcf', quantity: 1}],
+
+            // Note that it is not guaranteed your customers will be redirected to this
+            // URL *100%* of the time, it's possible that they could e.g. close the
+            // tab between form submission and the redirect.
+            successUrl: 'https://kbfs.org.uk/success',
+            cancelUrl: 'https://kbfs.org.uk',
+          })
+          .then(function (result) {
+            if (result.error) {
+              // If `redirectToCheckout` fails due to a browser or network
+              // error, display the localized error message to your customer.
+              console.log("error");
+              checkout_error.text(result.error.message).removeClass('d-none');
+            }
+          });
+        });
+
+        lux_ms_checkout_btn.click(function () {
+          // When the customer clicks on the button, redirect
+          // them to Checkout.
+          stripe.redirectToCheckout({
+            items: [{plan: 'plan_ECP3C5s0ZFr1az', quantity: 1}],
+
+            // Note that it is not guaranteed your customers will be redirected to this
+            // URL *100%* of the time, it's possible that they could e.g. close the
+            // tab between form submission and the redirect.
+            successUrl: 'https://kbfs.org.uk/success',
+            cancelUrl: 'https://kbfs.org.uk',
+          })
+          .then(function (result) {
+            if (result.error) {
+              // If `redirectToCheckout` fails due to a browser or network
+              // error, display the localized error message to your customer.
+              checkout_error.text(result.error.message).removeClass('d-none');
+            }
+          });
+        });
 
     });
 

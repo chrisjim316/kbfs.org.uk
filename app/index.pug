@@ -17,7 +17,7 @@ append content
           .col-md-8.m-auto.text-center
             p.m-b-30 King’s Banking &amp; Finance Society is the largest finance and banking society in King’s College London. We connect top talent like yourself to top firms and support you every step of the way in your application journey and beyond.
           p.lead
-            a(href="https://www.kclsu.org/organisation/kbfs/" class="btn btn-lg btn-brand") Become a member
+            a(href="#join" class="btn btn-lg btn-brand") Become a member
           ul.social-icons
             li
               a(href='https://twitter.com/KingsBFS')
@@ -220,7 +220,9 @@ append content
           h5 Past events
       .row
         .col-md-10.m-auto#past-events
-          
+      .row
+        .col-md-12
+          .space(data-mY="30px")
   // Events end
 
 
@@ -228,21 +230,24 @@ append content
 
   // Membership
   //- TODO: UNCOMMENT
-  //- section#join.module.divider-top
-  //-   .container
-  //-     .row
-  //-       .col-md-6.m-auto.text-center
-  //-         h1 Join Us
-  //-         p.lead Become a member and enjoy exclusive perks
-  //- 
-  //-     .row
-  //-         +pricing("X", "12", ["Free access to paid events (free drinks)", "Priority access to free events"])
-  //-         +pricing("LUX", "29", ["Free access to paid events (free drinks)", "Priority access to free events", "Priority access to exclusive events (visiting trading floors, Bulge Bracket Firms,...)", "Newsletters (Fast tracks, commercial awareness,...)", "Summer & Spring internship application guides and other invaluable resources", "Exclusive career opportunities from our partner firms sent directly to your inbox"])
-  //-         +pricing("EXEC", "19", ["Free access to paid events (free drinks)", "Priority access to free events", "Newsletters (Fast tracks, commercial awareness,...)"])
-  //- 
-  //-     .row
-  //-       .col-md-12
-  //-         .space(data-mY="30px")
+  section#join.module.divider-top
+    .container
+      .row
+        .col-md-6.m-auto.text-center
+          h1 Join Us
+          p.lead Become a member and enjoy exclusive perks
+  
+      .row
+          +pricing("X", "12", ["Free access to paid events (free drinks)", "Priority access to free events"])
+          +pricing("LUX", "29", ["Free access to paid events (free drinks)", "Priority access to free events", "Priority access to exclusive events (visiting trading floors, Bulge Bracket Firms,...)", "Newsletters (Fast tracks, commercial awareness,...)", "Summer & Spring internship application guides and other invaluable resources", "Exclusive career opportunities from our partner firms sent directly to your inbox"])
+          +pricing("EXEC", "19", ["Free access to paid events (free drinks)", "Priority access to free events", "Newsletters (Fast tracks, commercial awareness,...)"])
+      .row.d-none#checkout-error
+        .col-md-10.m-auto.text-center
+          .alert.alert-danger
+            | There was an with error processing your membership please try again.
+      .row
+        .col-md-12
+          .space(data-mY="30px")
   // Membership end
 
   = "\n"

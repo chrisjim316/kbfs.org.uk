@@ -56,10 +56,10 @@
                 <div class="inner-navigation collapse">
                     <div class="inner-nav">
                         <ul>
-                            <li class="menu-item-has-children menu-item-has-mega-menu"><a href="#"><span class="menu-item-span">Home</span></a></li>
                             <li class="menu-item-has-children menu-item-has-mega-menu"><a href="#mission"><span class="menu-item-span">Our Mission</span></a></li>
                             <li class="menu-item-has-children"><a href="#whatwedo"><span class="menu-item-span">What we do</span></a></li>
                             <li class="menu-item-has-children"><a href="#events"><span class="menu-item-span">Our Events</span></a></li>
+                            <li class="menu-item-has-children"><a href="#join"><span class="menu-item-span">Join Us</span></a></li>
                             <li class="menu-item-has-children menu-item-has-mega-menu"><a href="#team"><span class="menu-item-span">Our Team</span></a></li>
                             <li class="menu-item-has-children"><a href="#contact"><span class="menu-item-span">Contact Us</span></a></li>
                         </ul>
@@ -86,7 +86,7 @@
                             <div class="col-md-8 m-auto text-center">
                                 <p class="m-b-30">King’s Banking &amp; Finance Society is the largest finance and banking society in King’s College London. We connect top talent like yourself to top firms and support you every step of the way in your application journey and beyond.</p>
                             </div>
-                            <p class="lead"><a class="btn btn-lg btn-brand" href="https://www.kclsu.org/organisation/kbfs/">Become a member</a></p>
+                            <p class="lead"><a class="btn btn-lg btn-brand" href="#join">Become a member</a></p>
                             <ul class="social-icons">
                                 <li><a href="https://twitter.com/KingsBFS"><i class="fab fa-twitter"></i></a></li>
                                 <li><a href="https://www.instagram.com/Kings.BFS"><i class="fab fa-instagram"></i></a></li>
@@ -330,11 +330,96 @@
                     <div class="row">
                         <div class="col-md-10 m-auto" id="past-events"></div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="space" data-mY="30px"></div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!-- Events end-->
 
             <!-- Membership-->
+            <section class="module divider-top" id="join">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 m-auto text-center">
+                            <h1>Join Us</h1>
+                            <p class="lead">Become a member and enjoy exclusive perks</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 pricing-wrapper">
+                            <div class="pricing-header">
+                                <div class="pricing-title">X</div>
+                            </div>
+                            <div class="pricing-price"><span>£</span>12
+                            </div>
+                            <div class="pricing-body">
+                                <ul>
+                                    <li><i class="ti-check"></i>Free access to paid events (free drinks)
+                                    </li>
+                                    <li><i class="ti-check"></i>Priority access to free events
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pricing-footer mt-auto"><a class="btn btn-brand" href="javascript:void(0)" id="X-checkout">Buy</a></div>
+                        </div>
+                        <div class="col-md-4 pricing-wrapper">
+                            <div class="pricing-header">
+                                <div class="pricing-title">LUX</div>
+                            </div>
+                            <div class="pricing-price"><span>£</span>29
+                            </div>
+                            <div class="pricing-body">
+                                <ul>
+                                    <li><i class="ti-check"></i>Free access to paid events (free drinks)
+                                    </li>
+                                    <li><i class="ti-check"></i>Priority access to free events
+                                    </li>
+                                    <li><i class="ti-check"></i>Priority access to exclusive events (visiting trading floors, Bulge Bracket Firms,...)
+                                    </li>
+                                    <li><i class="ti-check"></i>Newsletters (Fast tracks, commercial awareness,...)
+                                    </li>
+                                    <li><i class="ti-check"></i>Summer &amp; Spring internship application guides and other invaluable resources
+                                    </li>
+                                    <li><i class="ti-check"></i>Exclusive career opportunities from our partner firms sent directly to your inbox
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pricing-footer mt-auto"><a class="btn btn-brand" href="javascript:void(0)" id="LUX-checkout">Buy</a></div>
+                        </div>
+                        <div class="col-md-4 pricing-wrapper">
+                            <div class="pricing-header">
+                                <div class="pricing-title">EXEC</div>
+                            </div>
+                            <div class="pricing-price"><span>£</span>19
+                            </div>
+                            <div class="pricing-body">
+                                <ul>
+                                    <li><i class="ti-check"></i>Free access to paid events (free drinks)
+                                    </li>
+                                    <li><i class="ti-check"></i>Priority access to free events
+                                    </li>
+                                    <li><i class="ti-check"></i>Newsletters (Fast tracks, commercial awareness,...)
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pricing-footer mt-auto"><a class="btn btn-brand" href="javascript:void(0)" id="EXEC-checkout">Buy</a></div>
+                        </div>
+                    </div>
+                    <div class="row d-none" id="checkout-error">
+                        <div class="col-md-10 m-auto text-center">
+                            <div class="alert alert-danger">There was an with error processing your membership please try again.</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="space" data-mY="30px"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!-- Membership end-->
 
             <!-- Team-->
@@ -577,6 +662,7 @@
         <script src="assets/js/bootstrap/bootstrap.min.js"></script>
         <script src="assets/js/custom/plugins.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+        <script src="https://js.stripe.com/v3"></script>
         <script src="assets/js/custom/custom.min.js"></script>
         <!-- Global site tag (gtag.js) - Google Analytics-->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131085922-1"></script>
