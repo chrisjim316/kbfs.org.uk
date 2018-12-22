@@ -642,15 +642,19 @@
          * Events
         /* ---------------------------------------------- */
 
-        function createEventsHtml(events) {
+        function createEventsHtml(events, ticket) {
           return events.map(function (event) {
             var time = moment(event['end_time']);
             var eventFBLink = 'https://www.facebook.com/events/'+event['id'];
-            return '<div class="row event"><div class="col-1"><div class="date-day">'+time.format('DD')+'</div><div class="date-month">'+time.format('MMM')+'</div></div><div class="col-8"><div class="event-name">'+event['name']+'</div><div>'+event['description'].substring(0, 80)+'... <a href="'+eventFBLink+'" target="_blank">See more</a></div></div><div class="col d-flex justify-content-end"><a class="btn btn-lg" href="'+eventFBLink+'" target="_blank">Get Tickets</a></div></div>';
+            var html = '<div class="row event"><div class="col-1"><div class="date-day">'+time.format('DD')+'</div><div class="date-month">'+time.format('MMM')+'</div></div>';
+            html += '<div class="col-'+(ticket ? '9' : '11')+'"><div class="event-name">'+event['name']+'</div><div>'+event['description'].substring(0, 110)+'... <a href="'+eventFBLink+'" target="_blank">See more</a></div></div>';
+            if (ticket) html += '<div class="col d-flex justify-content-end"><a class="btn btn-lg" href="'+eventFBLink+'" target="_blank">Get Tickets</a></div>';
+            html += '</div>';
+            return html;
           }).join('')
         }
 
-        function getEvents(type) {
+        function getEvents(type, ticket) {
           $.getJSON( FB_PAGE_EVENTS_ENDPOINT,{
                   'time_filter': type,
                   'access_token': FBAT
@@ -658,7 +662,7 @@
               var eventEl = $('#'+type+'-events');
               if(result.hasOwnProperty('data') && result.data.length) {
                 // Got events
-                var html = createEventsHtml(result['data']);
+                var html = createEventsHtml(result['data'].slice(0, 10), ticket);
                 eventEl.append(html);
               } else {
                 // Failed to load/no events
@@ -667,8 +671,8 @@
           });
         }
 
-        getEvents('past');
-        getEvents('upcoming');
+        getEvents('past', false);
+        getEvents('upcoming', true);
 
 
     });

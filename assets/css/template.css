@@ -10887,7 +10887,7 @@ img.img-shadow,
 
 .client {
     text-align: center;
-    padding: 20px;
+    padding: 1.875rem 1.25rem;
     opacity: .6;
     transition: all .3s ease-in-out;
     width: 9.375rem;
@@ -10899,6 +10899,20 @@ img.img-shadow,
 
 .client:hover {
     opacity: 1;
+}
+
+.owl-centered .owl-wrapper {
+    display: table !important;
+}
+
+.owl-centered .owl-item {
+    display: table-cell;
+    float: none;
+    vertical-align: middle;
+}
+
+.owl-centered .owl-item > .client {
+    text-align: center;
 }
 
 .clients-carousel .owl-item img {
