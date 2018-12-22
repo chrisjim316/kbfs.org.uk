@@ -46,9 +46,16 @@
             x_ms_checkout_btn       = $('#X-checkout'),
             exec_ms_checkout_btn       = $('#EXEC-checkout'),
             lux_ms_checkout_btn       = $('#LUX-checkout'),
+            stripe = Stripe('pk_live_iIWIz45ZpcdDBc1qE90Nz0O3', {
+              betas: ['checkout_beta_4']
+            }),
+            X_MS_PKU = 'plan_ECO0y90DRpt1Bo',
+            EXEC_MS_PKU = 'plan_ECPqNJgso6ZTVr',
+            LUX_MS_PKU = 'plan_ECPsN8SqYzcIDq',
+            CHECKOUT_SUCCESS_URL = 'https://kbfs.org.uk/success',
+            CHECKOUT_CANCELED_URL = 'https://kbfs.org.uk',
             FB_PAGE_EVENTS_ENDPOINT = 'https://graph.facebook.com/v3.2/1398145177083309/events?callback=?',
             FBAT = 'EAAHGeuyTjv0BAAnq5CZC43vlz5V2yuUk9ZBTkYaZBTQn96qkQEXt3Cymf52C6Wwe4sWvGacKVCj7PYJZAq5m0ZAJ6llVFyZBXPWRMU7jbrVky342Ntue63CBRdZAafp9wZA5TC2GYj3QoQQZBH5ELXBcyU9RmFozIjFmYC2yA5eOPZC0ayCwruHWXi';
-
         /* ---------------------------------------------- /*
          * Utils
         /* ---------------------------------------------- */
@@ -701,72 +708,37 @@
         //   checkout_error.removeClass('d-none');
         // }
 
-        var stripe = Stripe('pk_test_Do1DWrarOVMDX2E5IIfb433c', {
-          betas: ['checkout_beta_4']
-        });
-
-        x_ms_checkout_btn.click(function () {
+        function checkout(code) {
           // When the customer clicks on the button, redirect
           // them to Checkout.
           stripe.redirectToCheckout({
-            items: [{plan: 'plan_ECP6B8D7gRPCP5', quantity: 1}],
+            items: [{plan: code, quantity: 1}],
 
             // Note that it is not guaranteed your customers will be redirected to this
             // URL *100%* of the time, it's possible that they could e.g. close the
             // tab between form submission and the redirect.
-            successUrl: 'https://kbfs.org.uk/success',
-            cancelUrl: 'https://kbfs.org.uk',
+            successUrl: CHECKOUT_SUCCESS_URL,
+            cancelUrl: CHECKOUT_CANCELED_URL,
           })
           .then(function (result) {
             if (result.error) {
               // If `redirectToCheckout` fails due to a browser or network
               // error, display the localized error message to your customer.
-              checkout_error.text(result.error.message).removeClass('d-none');
+              checkout_error.removeClass('d-none').find('.alert').text(result.error.message);
             }
           });
+        }
+
+        x_ms_checkout_btn.click(function () {
+          checkout(X_MS_PKU);
         });
 
         exec_ms_checkout_btn.click(function () {
-          // When the customer clicks on the button, redirect
-          // them to Checkout.
-          stripe.redirectToCheckout({
-            items: [{plan: 'plan_ECO7UnUs5MPYcf', quantity: 1}],
-
-            // Note that it is not guaranteed your customers will be redirected to this
-            // URL *100%* of the time, it's possible that they could e.g. close the
-            // tab between form submission and the redirect.
-            successUrl: 'https://kbfs.org.uk/success',
-            cancelUrl: 'https://kbfs.org.uk',
-          })
-          .then(function (result) {
-            if (result.error) {
-              // If `redirectToCheckout` fails due to a browser or network
-              // error, display the localized error message to your customer.
-              console.log("error");
-              checkout_error.text(result.error.message).removeClass('d-none');
-            }
-          });
+          checkout(EXEC_MS_PKU);
         });
 
         lux_ms_checkout_btn.click(function () {
-          // When the customer clicks on the button, redirect
-          // them to Checkout.
-          stripe.redirectToCheckout({
-            items: [{plan: 'plan_ECP3C5s0ZFr1az', quantity: 1}],
-
-            // Note that it is not guaranteed your customers will be redirected to this
-            // URL *100%* of the time, it's possible that they could e.g. close the
-            // tab between form submission and the redirect.
-            successUrl: 'https://kbfs.org.uk/success',
-            cancelUrl: 'https://kbfs.org.uk',
-          })
-          .then(function (result) {
-            if (result.error) {
-              // If `redirectToCheckout` fails due to a browser or network
-              // error, display the localized error message to your customer.
-              checkout_error.text(result.error.message).removeClass('d-none');
-            }
-          });
+          checkout(LUX_MS_PKU);
         });
 
     });
