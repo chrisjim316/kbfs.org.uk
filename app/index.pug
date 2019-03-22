@@ -8,7 +8,7 @@ append css
 append content
 
   // Hero
-  section.module-cover.parallax.text-center.fullscreen(data-background="/assets/images/kbfs_banner.jpg" data-overlay="0.65")
+  section.module-cover.parallax.text-center.fullscreen(data-background="assets/images/kbfs_banner.jpg" data-overlay="0.65")
     .container
 
       .row
@@ -110,11 +110,11 @@ append content
     .container
       .row
         .col-md-6.m-auto.text-center
-          h1 Our Statistics
-          p.lead Our impact
+          h1 Our Impact
+          p.lead  Our statistics
       .row
         .col-md-3
-          +Counter("Active Members", "2800", "icon-energy icons")
+          +Counter("Active Members", "3000", "icon-energy icons")
         .col-md-3
           +Counter("Events Hosted", "100", "icon-energy icons")
         .col-md-3
@@ -191,7 +191,7 @@ append content
             .icon-box-title
               h6 Promote Diversity &amp; Inclusion
             .icon-box-content
-              p Our diversity makes us stronger.
+              p Our diversity makes us stronger
         
     .row
       .col-md-12
@@ -237,7 +237,7 @@ append content
           p.lead Become a member and enjoy exclusive perks
   
       .row
-          +pricing("X", "12", ["Free access to paid events (free drinks)", "Priority access to free events"])
+          +pricing("X", "12", ["Free access to paid events"])
           +pricing("LUX", "29", ["Free access to paid events (free drinks)", "Priority access to free events", "Priority access to exclusive events (visiting trading floors, Bulge Bracket Firms,...)", "Newsletters (Fast tracks, commercial awareness,...)", "Summer & Spring internship application guides and other invaluable resources", "Exclusive career opportunities from our partner firms sent directly to your inbox"])
           +pricing("EXEC", "19", ["Free access to paid events (free drinks)", "Priority access to free events", "Newsletters (Fast tracks, commercial awareness,...)"])
       .row.d-none#checkout-error
