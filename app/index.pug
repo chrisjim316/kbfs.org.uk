@@ -17,7 +17,7 @@ append content
           .col-md-8.m-auto.text-center
             p.m-b-30 King’s Banking &amp; Finance Society is the largest finance and banking society in King’s College London. We connect top talent like yourself to top firms and support you every step of the way in your application journey and beyond.
           p.lead
-            a(href="#join" class="btn btn-lg btn-brand") Become a member
+            a(href="https://www.kclsu.org/organisation/kbfs/" target="_blank" class="btn btn-lg btn-brand") Become a member
           ul.social-icons
             li
               a(href='https://twitter.com/KingsBFS')
@@ -234,15 +234,19 @@ append content
         .col-md-6.m-auto.text-center
           h1 Join Us
           p.lead Become a member and enjoy exclusive perks
-  
-      .row
-          +pricing("X", "12", ["Free access to paid events"])
-          +pricing("LUX", "29", ["Free access to paid events (free drinks)", "Priority access to free events", "Priority access to exclusive events (visiting trading floors, Bulge Bracket Firms,...)", "Newsletters (Fast tracks, commercial awareness,...)", "Summer & Spring internship application guides and other invaluable resources", "Exclusive career opportunities from our partner firms sent directly to your inbox"])
-          +pricing("EXEC", "19", ["Free access to paid events (free drinks)", "Priority access to free events", "Newsletters (Fast tracks, commercial awareness,...)"])
-      .row.d-none#checkout-error
-        .col-md-10.m-auto.text-center
-          .alert.alert-danger
-            | There was an with error processing your membership please try again.
+      .row  
+        .col-md-6.m-auto.text-center
+          p.lead
+            a(href="https://www.kclsu.org/organisation/kbfs/" target="_blank" class="btn btn-lg btn-brand") Become a member
+      //- .row
+        //- .col-md-12
+          //- +pricing("X", "12", ["Free access to paid events"])
+          //- +pricing("LUX", "12", ["Free access to paid events (free drinks)", "Priority access to free events", "Priority access to exclusive events (visiting trading floors, Bulge Bracket Firms,...)", "Newsletters (Fast tracks, commercial awareness,...)", "Summer & Spring internship application guides and other invaluable resources", "Exclusive career opportunities from our partner firms sent directly to your inbox"])
+          //- +pricing("EXEC", "19", ["Free access to paid events (free drinks)", "Priority access to free events", "Newsletters (Fast tracks, commercial awareness,...)"])
+      //- .row.d-none#checkout-error
+      //-   .col-md-10.m-auto.text-center
+      //-     .alert.alert-danger
+      //-       | There was an with error processing your membership please try again.
       .row
         .col-md-12
           .space(data-mY="30px")
@@ -268,21 +272,36 @@ append content
         .col-md-12
           .space(data-MY="60px")
 
+      //- .row
+      //-   .col-lg-4.col-md-3
+      //-   .col-lg-4.col-md-6
+      //-     +team("assets/images/team/juan.jpeg", "JUAN BETANCOURT", "The Board")
+      //-   .col-lg-4.col-md-3
+      
       .row
-        .col-lg-4.col-md-3
-        .col-lg-4.col-md-6
+        .col-lg-2.col-md-2
+        .col-lg-4.col-md-4
+          +team("assets/images/team/chris.jpeg", "CHRIS JIM", "The Board")
+
+        .col-lg-4.col-md-4
           +team("assets/images/team/juan.jpeg", "JUAN BETANCOURT", "The Board")
-        .col-lg-4.col-md-3
-
+        .col-lg-2.col-md-2
+    
+      // CENTERING STYLE
+      //- .row
+      //-   .col-lg-4.col-md-3
+      //-   .col-lg-4.col-md-6
+      //-     +team("assets/images/team/samon.jpeg", "SAMON SANCHULI", "President")
+      //-   .col-lg-4.col-md-3
+      
       .row
         .col-lg-2.col-md-2
         .col-lg-4.col-md-4
-          +team("assets/images/team/chris.jpeg", "CHRIS JIM", "President")
+          +team("assets/images/team/samon.jpeg", "SAMON SANCHULI", "President")
 
         .col-lg-4.col-md-4
-          +team("assets/images/team/habib.jpeg", "HABIB REHMAN", "Vice President")
-        .col-lg-2.col-md-2
-
+          +team("assets/images/team/Julio.jpeg", "JULIO ALEGRIA", "Vice President")
+        .col-lg-2.col-md-2          
 
       .row
         .col-lg-4.col-md-4
@@ -294,10 +313,9 @@ append content
         .col-lg-4.col-md-4
           +team("assets/images/team/arina.jpeg", "ARINA KURDOVA", "Senior Associate")
         .col-lg-4.col-md-4
-          +team("assets/images/team/Julio.jpeg", "JULIO ALEGRIA", "Senior Associate")
+          +team("assets/images/team/filip.jpeg", "FILIP BOLCO", "Senior Associate")
         .col-lg-4.col-md-4
           +team("assets/images/team/Bartlomiej.jpeg", "BARTLOMIEJ MOZDZEN", "Senior Associate")
-
 
       .row
         .col-md-12
