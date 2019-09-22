@@ -1,0 +1,28 @@
+extends include/templates/layout
+
+block vars
+  - var header_transparent = true;
+
+append css
+
+append content
+
+  // Hero
+  section#signupfinimize.module-cover.parallax.text-center.fullscreen(data-background="/assets/images/kbfs_banner.jpg" data-overlay="0.9")
+    .container
+      .row
+        .col-md-12
+          p.lead.m-t-65
+            iframe(width='500', height='430', src='https://www.finimize.com/wp/signup/kings-banking-finance-society/')
+  // Hero end
+  
+  section#news.module.bg-black.parallax.text-center
+    .container
+      .row
+        .col-md-12
+          h2.m-b-10: strong Get news like these directly into your inbox. 
+          h2.m-b-40: strong Tailor your preferences.
+          iframe(width='530', height='371', src='https://www.finimize.com/wp/news/easing-does-it-2/' frameborder='0' allowtransparency='true' allow='encrypted-media')
+          iframe(width='530', height='371', src='https://www.finimize.com/wp/news/microsoft-word/' frameborder='0' allowtransparency='true' allow='encrypted-media')
+          p.lead.m-b-80.m-t-30
+            a(href='#signupfinimize' class="btn btn-lg btn-brand") Join now to enjoy exclusive benefit
