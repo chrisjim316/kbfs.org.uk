@@ -55,7 +55,7 @@
             CHECKOUT_SUCCESS_URL = 'https://kbfs.org.uk/success',
             CHECKOUT_CANCELED_URL = 'https://kbfs.org.uk',
             FB_PAGE_EVENTS_ENDPOINT = 'https://graph.facebook.com/v3.2/1398145177083309/events?callback=?',
-            FBAT = 'EAAHGeuyTjv0BAAnq5CZC43vlz5V2yuUk9ZBTkYaZBTQn96qkQEXt3Cymf52C6Wwe4sWvGacKVCj7PYJZAq5m0ZAJ6llVFyZBXPWRMU7jbrVky342Ntue63CBRdZAafp9wZA5TC2GYj3QoQQZBH5ELXBcyU9RmFozIjFmYC2yA5eOPZC0ayCwruHWXi';
+            FBAT = 'EAAC7oBu2ho0BALXKniuwTU9rBMMCFNbpGtTBsSp5zJ6PPMN9yfEsVmPPdSE9FGSVVueWZBJsjX1EHeu3lUjNxgKiWVjptQyj4ZAcF1xvdpMl41YHnrj87Wx7VcoChi6X6QJTdFtAdCU4M9qQzQCM3q7hknrn2DjwXJPZCvjmwZDZD';
         /* ---------------------------------------------- /*
          * Utils
         /* ---------------------------------------------- */
