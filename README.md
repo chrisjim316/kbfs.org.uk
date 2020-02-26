@@ -4,6 +4,18 @@ Boomerang - is clean, modern and responsive Bootstrap 4 template developed for c
 
 Boomerang Bootstrap 4 template is built using modern tools: Gulp, PUG(Jade - high performance template engine), SASS, HTML5 and CSS3.
 
+#### Documentation
+
+You can find docs in "dist/documentation.html" or use "Easy start" instruction.
+
+#### Easy start
+
+You should already have Node installed in your machine to build the project. Once node is installed, All you should do to start your project is to open the terminal in the root directory (where the package.json file is located) and enter fallowing commands.
+
+* npm install -g gulp
+* npm install
+* gulp
+
 #### Whats Included / Boomerang Core Features
 
 - Multi-page sites and one-page sites
@@ -40,21 +52,3 @@ Boomerang Bootstrap 4 template is built using modern tools: Gulp, PUG(Jade - hig
 - Performance Optimization
 - Built with Bootstrap 4
 - Free updates and support
-
-#### Documentation
-
-You can find docs in "dist/documentation.html" or use "Easy start" instruction.
-
-#### Easy start
-
-You should already have Node installed in your machine to build the project. Once node is installed, All you should do to start your project is to open the terminal in the root directory (where the package.json file is located) and enter fallowing commands.
-
-* npm install -g gulp
-* npm install
-* gulp
-
-#### Support
-
-Please feel free to email here — web-master72[at]yandex.com
-
-The images used on the demo site are for demonstration purposes only and are not included in the download file. We have included placeholder images for each instance.
