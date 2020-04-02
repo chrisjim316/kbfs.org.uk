@@ -12233,7 +12233,7 @@ img.img-shadow,
     top: 50%;
     margin-top: -4px;
     font-family: 'themify';
-    speak: none;
+    speak-as: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
