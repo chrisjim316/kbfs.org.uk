@@ -13799,22 +13799,62 @@ body.off-canvas-sidebar-open:after {
 
 
 
-.container_president {
-    padding: 20px 40px 40px;
+.president {
+    padding: 40px 80px 80px;
+    display: flex; 
+    flex-direction: column;
+
 }
-.container__image {
+
+.container_text_img{
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.container_image {
+        display: inline-block;
         vertical-align: top;
         width: 40%;
-        float: right;
+        height: 40%;
         margin: 10px 50px 0 20px;
     }
-.container__text {
+.container_text {
         display: inline-block;
+        flex-direction: row;
         width: 46%;
         @media (max-width: 620px) {
             width: 100%;
         }
     }
+.container_caption{
+    display: vertical-align;
+    flex-direction: row;
+    width: 46%;
+    @media (max-width: 620px) {
+        width: 100%;
+    }
+    padding: 20px 40px 40px; 
+}
+
+.container_info{
+    display: run-in;
+    flex-direction: column;
+    width: 46%;
+    @media (max-width: 620px) {
+        width: 100%;
+    }
+}
+
+.container_name{
+    display: run-in;
+    flex-direction: column;
+    width: 46%;
+    @media (max-width: 620px) {
+        width: 100%;
+    }
+}
 
 .p_right{
     float: right;
