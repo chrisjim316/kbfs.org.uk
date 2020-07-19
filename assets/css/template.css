@@ -13795,3 +13795,28 @@ body.off-canvas-sidebar-open:after {
     font-family: "Playfair Display", sans-serif !important;
     font-style: italic;
 }
+
+
+
+
+.container_president {
+    padding: 20px 40px 40px;
+}
+.container__image {
+        display: inline-block;
+        vertical-align: top;
+        width: 40%;
+        float: right;
+        margin: 10px 50px 0 20px;
+    }
+.container__text {
+        display: inline-block;
+        width: 46%;
+        @media (max-width: 620px) {
+            width: 100%;
+        }
+    }
+
+.p_right{
+    float: right;
+    }
