@@ -13803,7 +13803,6 @@ body.off-canvas-sidebar-open:after {
     padding: 20px 40px 40px;
 }
 .container__image {
-        display: inline-block;
         vertical-align: top;
         width: 40%;
         float: right;
