@@ -11218,23 +11218,31 @@ img.img-shadow,
 .team-item,
 .team-wrap,
 .team-content,
-.team-content-social {
+.team-content-social
+ {
   transition: all 0.4s ease-in-out;
 }
 
-.team-item {
+
+.team-item
+ {
   position: relative;
   border-radius: 0.1875rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   margin: 0 0 30px;
 }
 
-.team-item img {
+
+.team-item img
+ {
   border-radius: 0.1875rem;
   width: 100%;
 }
 
-.team-wrap {
+
+
+.team-wrap
+ {
   background: rgba(34, 34, 34, 0.6);
   position: absolute;
   border-radius: 0.1875rem;
@@ -11290,13 +11298,24 @@ img.img-shadow,
   opacity: 0.6;
 }
 
-.team-item:hover {
+.team-item:hover 
+{
   transform: translateY(-3px);
 }
 
-.team-item:hover .team-wrap {
+
+.team-item:hover .team-wrap 
+ {
   opacity: 1;
 }
+
+
+/* .previous-team-item {
+    height: auto; 
+    width: auto; 
+    max-width: 250px; 
+    max-height: 250px;
+} */
 
 .review-slides {
   text-align: center;
