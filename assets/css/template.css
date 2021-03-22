@@ -11293,7 +11293,7 @@ img.img-shadow,
 
 .previous-team-content {
     position: absolute;
-    width: 50%;
+    width: 100%;
     bottom: 0;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.4);
