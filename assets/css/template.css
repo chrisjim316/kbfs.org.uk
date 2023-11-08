@@ -11350,6 +11350,17 @@ img.img-shadow,
   opacity: 1;
 }
 
+.team-link {
+  position: absolute;
+  font-size: 30px;
+  top: 10px;
+  right: 10px;
+}
+
+.team-link:hover {
+  filter: invert(0.3);
+}
+
 
 /* .previous-team-item {
     height: auto; 
